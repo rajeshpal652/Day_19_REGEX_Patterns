@@ -7,18 +7,18 @@ import java.util.Scanner;
 
 public class UserRegistrationProblem {
 	public static void main(String[] args) {
-		System.out.println("Enter your First Name : ");
+		System.out.println("Enter your Full Name : ");
 		Scanner sc = new Scanner(System.in);
-		boolean result = Email(sc.nextLine());
+		boolean result = fullName(sc.nextLine());
 		
 		if(result) {
-			System.out.println("First Name is Valid.");
+			System.out.println("Full Name is Valid.");
 		}else {
-			System.out.println("First Name is Invalid.");
+			System.out.println("Full Name is Invalid.");
 		}
 	}
 	
-	public static boolean Email(String eMail) {
-		return eMail.matches("^[A-Z][a-z]{2,}");
+	public static boolean fullName(String fullName) {
+		return fullName.matches("^[A-Z][a-z]{2,}\\s[A-Z][a-z]{2,}$");
 	}
 }
