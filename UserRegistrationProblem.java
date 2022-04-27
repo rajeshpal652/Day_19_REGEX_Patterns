@@ -1,24 +1,24 @@
 package com.bl.userregistration;
 /*
  * @Author: Rajesh Pal
- * Checking if entered Phone number by user is valid or invalid.
+ * Checking if entered Password by user is valid or invalid.
  */
 import java.util.Scanner;
 
 public class UserRegistrationProblem {
 	public static void main(String[] args) {
-		System.out.println("Enter your Phone Number : ");
+		System.out.println("Enter the Password you want to put : ");
 		Scanner sc = new Scanner(System.in);
-		boolean result = phoneNumber(sc.nextLine());
+		boolean result = password(sc.nextLine());
 		
 		if(result) {
-			System.out.println("Phonne Number is Valid.");
+			System.out.println("Password is Valid.");
 		}else {
-			System.out.println("Phone Number is Invalid.");
+			System.out.println("Password is Invalid.");
 		}
 	}
 	
-	public static boolean phoneNumber(String phoneNumber) {
-		return phoneNumber.matches("^[0-9]{2}\s[0-9]{10}");
+	public static boolean password(String password) {
+		return password.matches("[a-zA-Z0-9.!@#$%^&_]{8,}");
 	}
 }
