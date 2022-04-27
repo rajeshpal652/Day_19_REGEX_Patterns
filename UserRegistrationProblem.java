@@ -2,6 +2,8 @@ package com.bl.userregistration;
 /*
  * @Author: Rajesh Pal
  * Checking if entered Password by user is valid or invalid.
+ * Rule 1 : Password should have minimum 8 characters.
+ * Rule 2 : Password should have at least one upper Case.
  */
 import java.util.Scanner;
 
@@ -19,6 +21,6 @@ public class UserRegistrationProblem {
 	}
 	
 	public static boolean password(String password) {
-		return password.matches("[a-zA-Z0-9.!@#$%^&_]{8,}");
+		return password.matches("^(?=.*[A-Z])[\\w\\W]*");
 	}
 }
